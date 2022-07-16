@@ -130,6 +130,10 @@ p{font-weight: 500;}
 }
 
 .popup {
+  display: none;
+}
+
+.popup.active {
   display: flex;
   justify-content: center;
   align-items: center;

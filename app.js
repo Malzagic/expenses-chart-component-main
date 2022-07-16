@@ -15,10 +15,16 @@ function setDate(data) {
   })
   bars.forEach((bar, index) => {
     bar.style.height = data[index].amount + '%'
-    bar.addEventListener('mouseover', (e) => {
+    bar.addEventListener('mousemove', e => {
       const popup = document.querySelector('.popup');
       const popupTitle = document.querySelector('.popup-title');
+      popup.classList.add('active')
       popupTitle.textContent = '$' + e.target.style.height.slice(0,5);
+    });
+
+    bar.addEventListener('mouseout', () => {
+        const popup = document.querySelector('.popup');
+        popup.classList.remove('active')
     });
   })
 }
