@@ -26,7 +26,6 @@ body {
   font-size: 18px;
   font-family: var(--Primary-font);
   background-color: var(--Neutral-Cream);
-  position: relative;
 }
 
 h1, h2, h3, h4 {font-weight: 700;}
@@ -82,6 +81,7 @@ p{font-weight: 500;}
   align-content: flex-end;
   flex-wrap: wrap;
   height: 100%;
+  position: relative;
 }
 
 .statistic-bar .bar {
@@ -95,6 +95,10 @@ p{font-weight: 500;}
 
 .statistic-bar .bar:hover {
   background-color: var(--Neutral-Cream);
+}
+
+.statistic-bar .bar.today {
+  background-color: var(--Primary-Cyan);
 }
 
 .statistic-bar p {
@@ -123,8 +127,6 @@ p{font-weight: 500;}
   justify-content: flex-end;
 }
 
-
-
 .main-summary .column p {
   color: var(--Neutral-Medium-brown);
 }
@@ -138,6 +140,7 @@ p{font-weight: 500;}
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: 0;
   width: 68px;
   height: 38px;
   color: var(--Neutral-Very-pale-orange);
