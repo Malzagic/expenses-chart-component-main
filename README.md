@@ -29,7 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Dektop](./screenshots/desktop-view.png) [Mobile](./screenshots/mobile-view.png)
+![Dektop](./screenshots/desktop-view.png) 
+![Mobile](./screenshots/mobile-view.png)
 
 ### Links
 
