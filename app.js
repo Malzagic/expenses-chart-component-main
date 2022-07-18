@@ -77,6 +77,8 @@ const createElements = () => {
 
 }
 
+getData();
+
 window.onload = function todayDay() {
   const date = new Date();
   const today = date.getDay();
@@ -102,7 +104,6 @@ window.onload = function todayDay() {
   });
 }
 
-getData();
 
 refreshBtn.addEventListener('mouseover', () => {
   document.documentElement.style.setProperty('--left', '0%')
