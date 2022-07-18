@@ -99,6 +99,7 @@ window.onload = function todayDay() {
       p.classList.add('popup-title');
       p.textContent = '$' + span.style.height.slice(0,5);
       if(p.textContent === '$') todayDay();
+      
     }
 
   });
