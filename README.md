@@ -73,4 +73,4 @@ async function getData() {
 ## Author
 
 - Website - [Malzagic on GitHub](https://github.com/Malzagic)
-- Frontend Mentor - [@malzagic](https://www.frontendmentor.io/profile/Malzagic)
+- Frontend Mentor - [@Malzagic](https://www.frontendmentor.io/profile/Malzagic)
