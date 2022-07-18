@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [frontendmentor.io](https://your-solution-url.com)
-- Live Site URL: [GitPages](https://your-live-site-url.com)
+- Live Site URL: [GitPages](https://malzagic.github.io/malzagic-expenses-chart-component-main.github.io/)
 
 ## My process
 
