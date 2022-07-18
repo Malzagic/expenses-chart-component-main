@@ -16,9 +16,9 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
 
 ### The challenge
 
@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Dektop](./screenshots/desktop-view.png)[Mobile](./screenshots/mobile-view.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
