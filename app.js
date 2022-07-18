@@ -1,15 +1,29 @@
 const days = document.querySelectorAll('[data-day="day"]');
 const bars = document.querySelectorAll('.bar');
+const refreshBtn = document.querySelector('.refresh');
 
 async function getData() {
+
   const API_URL = './data.json';
   fetch(API_URL)
     .then(response => response.json())
     .then(data => setData(data));
+
 }
 
 
 function setData(data) {
+
+  const summaryMonthAmount = document.querySelector('.summary-amount-title')
+  const newArr = []
+  
+  data.forEach(item => {
+    newArr.push(item.amount)
+  });
+
+  summaryMonthAmount.textContent = newArr.reduce((prevAmount, nextAmount) => {
+    return prevAmount + nextAmount;
+  });
 
   createElements();
 
@@ -86,3 +100,15 @@ window.onload = function todayDay() {
 }
 
 getData();
+
+refreshBtn.addEventListener('mouseover', () => {
+  document.documentElement.style.setProperty('--left', '0%')
+});
+
+refreshBtn.addEventListener('mouseout', () => {
+  document.documentElement.style.setProperty('--left', '-50%')
+});
+
+refreshBtn.addEventListener('click', () => {
+  getData();
+})

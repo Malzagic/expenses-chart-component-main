@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,6 +14,8 @@
   --Neutral-Very-pale-orange: hsl(33, 100%, 98%);
 
   --Primary-font: 'DM Sans', sans-serif;
+
+  --left: -50%;
 }
 
 body {
@@ -34,6 +36,7 @@ p{font-weight: 500;}
 .top-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--Primary-Soft-red);
   color: var(--Neutral-Very-pale-orange);
   width: 500px;
@@ -42,8 +45,39 @@ p{font-weight: 500;}
   margin-bottom: 1rem;
 }
 
+.top-section .column:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .top-section .column p {
   font-size: 16px;
+}
+
+.btn.refresh {
+  display: flex;
+  position: relative;
+  background-color: var(--Neutral-Dark-brown);
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn.refresh::after {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: '';
+  border: 2px solid var(--Neutral-Very-pale-orange);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transform: translate(var(--left));
+  transition: transform .3s ease;
 }
 
 .main-content {
@@ -94,12 +128,12 @@ p{font-weight: 500;}
   transition: background-color .2s;
 }
 
-.statistic-bar .bar:hover {
-  background-color: var(--Neutral-Cream);
-}
-
 .statistic-bar .bar.today {
   background-color: var(--Primary-Cyan);
+}
+
+.statistic-bar .bar:hover {
+  background-color: var(--Neutral-Cream);
 }
 
 .statistic-bar p {
@@ -150,4 +184,13 @@ p{font-weight: 500;}
   font-weight: 700;
   padding: 5px 5px;
   color: var(--Neutral-Very-pale-orange);
+}
+
+@keyframes refresh-btn {
+  from {
+    left: -25px;
+  }
+  to {
+    left: 0px;
+  }
 }
