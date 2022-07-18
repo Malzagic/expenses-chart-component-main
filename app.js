@@ -14,16 +14,19 @@ async function getData() {
 
 function setData(data) {
 
+  const balance = document.querySelector('.balance');
   const summaryMonthAmount = document.querySelector('.summary-amount-title')
   const newArr = []
-  
+
+  let newBalance = parseFloat(balance.textContent.slice(1));
+
   data.forEach(item => {
     newArr.push(item.amount)
   });
 
-  summaryMonthAmount.textContent = newArr.reduce((prevAmount, nextAmount) => {
+  summaryMonthAmount.textContent = '$' + (newBalance - newArr.reduce((prevAmount, nextAmount) => {
     return prevAmount + nextAmount;
-  });
+  }));
 
   createElements();
 
